@@ -1,2 +1,7 @@
 #include <iostream>
-//This is going to be my class cpp file
+#include <chrono>	//used for time 
+#include "benchmark.h"
+
+void integer_operation() {
+
+}
