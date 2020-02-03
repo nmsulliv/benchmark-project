@@ -1,17 +1,17 @@
 #include <iostream>
 #include <chrono>	//used for time 
 #include "benchmark.h"
-using namespace std::chrono;
 
-void integer_operation() {
-	auto start = high_resolution_clock::now(); //This will start the clock before bench
-											   //benchmarks run
+void Benchmark::integer_operation() {
+	std::chrono::time_point<std::chrono::system_clock> start, end;
+	start = std::chrono::system_clock::now(); //This will start the clock before bench
+											  //benchmarks run
 	int answ;
-	for (long i = 0; i < 1000; i++) {
+	for (long i = 0; i < 100000000000; i++) {
 		answ = 2 + 2;
 	}
 	
-	auto stop = high_resolution_clock::now(); 	
-	auto duration = duration_cast<microseconds>(stop - start); 
-	std::cout << "exe time: "<< duration.count() << std::endl;
+	end = std::chrono::system_clock::now();	
+	std::chrono::duration<double> elapsed_seconds = end - start; 
+	std::cout << "exe time: "<< elapsed_seconds.count() << std::endl;
 }
