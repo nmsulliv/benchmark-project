@@ -3,6 +3,8 @@
 
 int main() {
 	Benchmark test1;
-	test1.Benchmark::integer_operation();
+// 	test1.Benchmark::integer_operation();
+	test1.Benchmark::floatingp_operation();
+
 return 0;
 }
