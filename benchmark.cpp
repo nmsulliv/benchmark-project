@@ -33,14 +33,19 @@ void Benchmark::floatingp_operation() {
 											  //benchmarks run
 	
 	float answ;
-	// for loop for 10^11 additions
+// 	// for loop for 10^11 additions
 // 	for (long i = 0; i < 100000000000; i++) {
 // 		answ = 2.1 + 2.1;
 // 	}
-	
-	// for loop for 5 x 10^10 multiplications
-	for (long i = 0; i < 50000000000; i++) {
-		answ = 2.1 * 4.1;
+// 	
+// 	// for loop for 5 x 10^10 multiplications
+// 	for (long i = 0; i < 50000000000; i++) {
+// 		answ = 2.1 * 4.1;
+// 	}
+	//for loop for 2 x 10^10 divisions
+	for (long i = 0; i < 20000000000; i++) {
+		answ = 4.1 / 2.2;
+		std::cout << answ << std::endl;
 	}
 	
 	end = std::chrono::system_clock::now();	
