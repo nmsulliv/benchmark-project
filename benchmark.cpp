@@ -7,13 +7,17 @@ void Benchmark::integer_operation() {
 	start = std::chrono::system_clock::now(); //This will start the clock before bench
 											  //benchmarks run
 	int answ;
-// 	for (long i = 0; i < 100000000000; i++) {
-// 		answ = 2 + 2;
-// 	}
+	//for loop for 10^11 additions
+	for (long i = 0; i < 100000000000; i++) {
+		answ = 2 + 2;
+	}
 	
+	//for loop for 5 x 10^10 multiplications
 	for (long i = 0; i < 50000000000; i++) {
 		answ = 2 * 4;
 	}
+	
+	//for loop for 2 x 10^10 divisions
 	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
