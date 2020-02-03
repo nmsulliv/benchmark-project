@@ -7,8 +7,12 @@ void Benchmark::integer_operation() {
 	start = std::chrono::system_clock::now(); //This will start the clock before bench
 											  //benchmarks run
 	int answ;
-	for (long i = 0; i < 100000000000; i++) {
-		answ = 2 + 2;
+// 	for (long i = 0; i < 100000000000; i++) {
+// 		answ = 2 + 2;
+// 	}
+	
+	for (long i = 0; i < 50000000000; i++) {
+		answ = 2 * 4;
 	}
 	
 	end = std::chrono::system_clock::now();	
