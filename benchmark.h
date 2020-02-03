@@ -8,6 +8,6 @@ public:
 	void floatingp_operation();
 	void memory();
 	void hard_drive();
-}
+};
 
 #endif
