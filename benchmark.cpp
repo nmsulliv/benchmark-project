@@ -32,6 +32,13 @@ void Benchmark::floatingp_operation() {
 	start = std::chrono::system_clock::now(); //This will start the clock before bench
 											  //benchmarks run
 	
+	float answ;
+	// for loop for 10^11 additions
+	for (long i = 0; i < 10; i++) {
+		answ = 2.1 + 2.1;
+		std::cout << answ << std::endl;
+	}
+	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
 	std::cout << "Integer Operation Benchmark Execution Time: "<< elapsed_seconds.count() << " seconds " << std::endl;
