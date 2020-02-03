@@ -1,5 +1,6 @@
+#ifndef __BENCHMARK__
+#define __BENCHMARK__
 #include <iostream>
-//This is going to be my class header file
 
 class Benchmark {
 public:
@@ -8,3 +9,5 @@ public:
 	void memory();
 	void hard_drive();
 }
+
+#endif
