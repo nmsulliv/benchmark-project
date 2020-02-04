@@ -52,3 +52,14 @@ void Benchmark::floatingp_operation() {
 	std::chrono::duration<double> elapsed_seconds = end - start; 
 	std::cout << "Floating Point Operation Benchmark Execution Time: "<< elapsed_seconds.count() << " seconds " << std::endl;
 }
+
+void Benchmark::memory() {
+	std::chrono::time_point<std::chrono::system_clock> start, end;
+	start = std::chrono::system_clock::now(); //This will start the clock before bench
+											  //benchmarks run
+	
+	
+	end = std::chrono::system_clock::now();	
+	std::chrono::duration<double> elapsed_seconds = end - start; 
+	std::cout << "Memory Benchmark Execution Time: "<< elapsed_seconds.count() << " seconds " << std::endl;
+}
