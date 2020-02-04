@@ -85,16 +85,16 @@ void Benchmark::hard_drive() {
 
 	std::ofstream file;
 	file.open ("test.txt");
+	const int x = 1;
 	
-	for (long i = 0; i < 1000000000; i++) {
-  		file << 1;
+	for (long i = 0; i < 250000000; i++) {
+  		file.write((char*) &x, sizeof(int));
 	}
   	file.close();
   	
 	std::ifstream inFile("test.txt");
-	int n = 0;
 	while(!inFile.eof()) {
-    	inFile >> n;
+    	inFile.read((char*) &x, sizeof(int));
 	}
 	
 	end = std::chrono::system_clock::now();	
