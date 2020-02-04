@@ -69,9 +69,20 @@ void Benchmark::memory() {
 		b = a[i];
 	}
 	
-	delete [] a;
+	delete [] a;	//deallocating memory
 	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
 	std::cout << "Memory Benchmark Execution Time: "<< elapsed_seconds.count() << " seconds " << std::endl;
+}
+
+void Benchmark::hard_drive() {
+	std::chrono::time_point<std::chrono::system_clock> start, end;
+	start = std::chrono::system_clock::now(); //This will start the clock before bench
+											  //benchmarks run
+
+	
+	end = std::chrono::system_clock::now();	
+	std::chrono::duration<double> elapsed_seconds = end - start; 
+	std::cout << "Hard Drive Benchmark Execution Time: "<< elapsed_seconds.count() << " seconds " << std::endl;
 }
