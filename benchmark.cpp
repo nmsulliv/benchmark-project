@@ -1,5 +1,6 @@
 #include <iostream>
 #include <chrono>	//used for time 
+#include <fstream>	//used for files
 #include "benchmark.h"
 
 void Benchmark::integer_operation() {
@@ -81,6 +82,10 @@ void Benchmark::hard_drive() {
 	start = std::chrono::system_clock::now(); //This will start the clock before bench
 											  //benchmarks run
 
+	ofstream file;
+	file.open ("test.txt");
+  	file << "Please writr this text to a file.\n this text is written using C++\n";
+  	file.close();
 	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
