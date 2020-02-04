@@ -90,9 +90,13 @@ void Benchmark::hard_drive() {
 	}
   	file.close();
   	
-  	 std::ifstream inFile("test.txt");
+	std::ifstream inFile("test.txt");
+	int n = 0;
+	while(!inFile.eof()) {
+    	inFile >> n;
+	}
 
-  	remove("test.txt");
+//   	remove("test.txt");
 	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
