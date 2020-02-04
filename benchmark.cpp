@@ -57,7 +57,11 @@ void Benchmark::memory() {
 	std::chrono::time_point<std::chrono::system_clock> start, end;
 	start = std::chrono::system_clock::now(); //This will start the clock before bench
 											  //benchmarks run
-	
+	int a[5000000000];
+	// for loop to write elements into array
+	for (long i = 0; i < 5000000000; i++) {
+		a[i] = 4;
+	}
 	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
