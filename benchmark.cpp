@@ -82,10 +82,17 @@ void Benchmark::hard_drive() {
 	start = std::chrono::system_clock::now(); //This will start the clock before bench
 											  //benchmarks run
 
-	ofstream file;
+	std::ofstream file;
 	file.open ("test.txt");
-  	file << "Please writr this text to a file.\n this text is written using C++\n";
+	
+	for (long i = 0; i < 1000000000; i++) {
+  		file << 1;
+	}
   	file.close();
+  	
+  	 std::ifstream inFile("test.txt");
+
+  	remove("test.txt");
 	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
