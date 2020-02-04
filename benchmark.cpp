@@ -69,12 +69,13 @@ void Benchmark::memory() {
 	for (long i = 0; i < 5000000000; i++) {
 		b = a[i];
 	}
-	
-	delete [] a;	//deallocating memory
-	
+		
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
 	std::cout << "Memory Benchmark Execution Time: "<< elapsed_seconds.count() << " seconds " << std::endl;
+	
+	delete [] a;	//deallocating memory
+
 }
 
 void Benchmark::hard_drive() {
@@ -95,10 +96,10 @@ void Benchmark::hard_drive() {
 	while(!inFile.eof()) {
     	inFile >> n;
 	}
-
-//   	remove("test.txt");
 	
 	end = std::chrono::system_clock::now();	
 	std::chrono::duration<double> elapsed_seconds = end - start; 
 	std::cout << "Hard Drive Benchmark Execution Time: "<< elapsed_seconds.count() << " seconds " << std::endl;
+	
+	remove("test.txt");
 }
