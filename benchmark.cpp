@@ -60,8 +60,15 @@ void Benchmark::memory() {
 	int* a = new int[5000000000];
 	// for loop to write elements into array
 	for (long i = 0; i < 5000000000; i++) {
-		a[i] = 1;
+		a[i] = 4;
 	}
+	
+	int b;
+	// for loop to read elements from array
+	for (long i = 0; i < 5000000000; i++) {
+		b = a[i];
+	}
+	
 	delete [] a;
 	
 	end = std::chrono::system_clock::now();	
